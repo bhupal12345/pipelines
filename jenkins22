@@ -1,0 +1,26 @@
+pipeline {
+	    agent any
+	    
+	    environment{
+	    PATH="/opt/maven/apache-maven-3.6.1/bin:$PATH"
+	
+
+	
+
+	    }
+	    stages {
+	   
+	        }
+	        stage('--test--') {
+	            steps {
+	                sh "mvn test"
+	            }
+	        }
+	        stage('--package--') {
+	            steps {
+	                sh "mvn package"
+	            }
+	        }
+	    }
+	}
+
