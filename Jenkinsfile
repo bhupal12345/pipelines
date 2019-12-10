@@ -1,7 +1,7 @@
 pipeline {
     agent any
     def mvnHome = tool name: 'maven', type: 'maven'
-    def mvncmd= "$(mvnHome)/bin/mcv"
+    def mvncmd= "${mvnHome}/bin/mcv"
 
     stages {
         stage('---clean---') {
