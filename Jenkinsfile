@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    def mvnHome = tool name: 'maven', type: 'maven'
+
     
 
     stages {
