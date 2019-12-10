@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('---clean---') {
             steps {
-               echo"first step"
+               echofirst step
             }
         }
         stage('--test--') {
