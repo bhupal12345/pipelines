@@ -1,24 +1,21 @@
 pipeline {
 	    agent any
 	    
-	    environment{
-	    PATH="/opt/maven/apache-maven-3.6.1/bin:$PATH"
-	
-
-	
-
-	          }
+	   
 	    stages {
 	   
 	 
 	        stage('--test--') {
 	            steps       {
-	                sh "mvn test"
-	                          }
+	           sh """
+                  scp -o StrictHostKeyChecking=no 172-31-19-25/opt/nn  ec2-user@172-31-28-99:/opt/
+	                """          }
 	          }
 	        stage('--package--') {
 	            steps {
-	                sh "mvn package"
+	                  sh """
+                    scp -o StrictHostKeyChecking=no 172-31-19-25/opt/nn  ec2-user@172-31-28-99:/opt/
+	                """ 
 	            }
 	        }
 	    }
