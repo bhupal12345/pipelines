@@ -1,13 +1,13 @@
 pipeline {
     agent any
     def mvnHome = tool name: 'maven', type: 'maven'
-    def mvncmd= "${mvnHome}/bin/mvn"
+    
 
     stages {
         stage('---clean---') {
             steps {
               echo"first step1"
-                "$(mvnCMD) compile"
+                
             }
         }
         stage('--test--') {
