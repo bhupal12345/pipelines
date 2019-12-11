@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('---clean---') {
             steps {
-             sh "scp /home/ec2-usernn 3.8.8.65:/home/ec2-user"
+             sh "scp /home/ec2-user nn 3.8.8.65:/home/ec2-user"
               
                 
             }
