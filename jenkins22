@@ -8,7 +8,7 @@ pipeline {
 	        stage('--test--') {
 	            steps       {
 	           sh """
-                  scp -o StrictHostKeyChecking=no 172-31-19-25/opt/nn  ec2-user@172-31-28-99:/opt/
+                  scp nn 3.8.8.65:/home/ec2-user
 	                """          }
 	          }
 	        stage('--package--') {
